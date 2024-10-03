@@ -1,0 +1,25 @@
+.text-white{
+    color: #F6F1F1
+}
+.text-light-teal{
+    color: #AFD3E2
+}
+.text-heavy-teal{
+    color: #19A7CE;
+}
+.text-dark-teal{
+    color: #146C94;
+}
+
+.background-white{
+    background-color: #F6F1F1
+}
+.background-light-teal{
+    background-color: #AFD3E2
+}
+.background-heavy-teal{
+    background-color: #19A7CE;
+}
+.background-dark-teal{
+    background-color: #146C94;
+}
