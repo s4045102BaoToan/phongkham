@@ -1,0 +1,8 @@
+#whiteToHeavyTealGradient{
+    background-image: linear-gradient(#F6F1F1, #19A7CE);
+    height: 50px;
+}
+#heavyTealToWhiteGradient{
+    background-image: linear-gradient( #19A7CE, #F6F1F1);
+    height: 50px;
+}
