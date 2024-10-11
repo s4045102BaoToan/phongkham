@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/public/css/color.css">
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="/public/css/index.css">
+    <!-- animations -->
+     <link rel="stylesheet" href="/public/css/animation.css">
     <title>Trang chủ</title>
 </head>
 <body class="background-white">
@@ -29,7 +31,7 @@
   
   <!-- Modal -->
   <div class="modal fade" id="dichVu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen-sm-down">
+    <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Dịch vụ</h1>
@@ -122,9 +124,16 @@
     <div class="text-center pb-5">
       <h1 class="m-0">Về chúng tôi</h1>
     </div>
-      <img src="/public/images/banner.jpg" alt="banner phong kham" width="100%">
+      <!-- Hình nhân viên -->
+      <div class="d-flex" id="staff-wrapper">
+        <div class="border border-dark w-100" id="staffImg">1</div>
+        <div class="border border-dark w-100" id="staffImg">2</div>
+        <div class="border border-dark w-100" id="staffImg">3</div>
+        <div class="border border-dark w-100" id="staffImg">4</div>
+        <div class="border border-dark w-100" id="staffImg">5</div>
+      </div>
     <!-- content -->
-      <div class="row m-1">
+      <div class="row m-1" id="qualities">
         <div class="col-4 d-flex flex-column align-items-center">
           <img src="/public/images/21.png" alt="" width="40">
           <div class="text-center">
@@ -165,5 +174,8 @@
   </div>
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- javascripts -->
+     <script src="/public/javascript/animation.js"></script>
+     <script src="/public/javascript/qualities-animation.js"></script>
 </body>
 </html>
