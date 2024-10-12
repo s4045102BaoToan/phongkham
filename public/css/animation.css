@@ -1,14 +1,26 @@
 @keyframes bottom-fade-in {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
 	to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+.out-of-view{
+    opacity: 0;
+    transform: translateY(20px);
+} 
+
 @media (prefers-reduced-motion: no-preference) {
-    .staff-animation {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: bottom-fade-in 1s forwards;
+    .bottom-fade-in {
+        animation: bottom-fade-in 1.5s forwards;
     }
   }
+
+/*👉.animated-section > *{
+    opacity: .5;
+    transform: translateY(20px);
+}👈*/
