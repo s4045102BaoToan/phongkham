@@ -1,3 +1,19 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family:  "Montserrat", serif;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
 #whiteToHeavyTealGradient{
     background-image: linear-gradient(#F6F1F1, #19A7CE);
     height: 50px;
@@ -5,4 +21,78 @@
 #heavyTealToWhiteGradient{
     background-image: linear-gradient( #19A7CE, #F6F1F1);
     height: 50px;
+}
+
+/*----------- TOP LOGO -----------*/
+
+#logo-container{
+    position: absolute;
+    z-index: 1;
+    border-radius: 0% 0% 10% 10% / 0% 0% 50% 50% ;
+    background: rgb(0,212,255);
+    background: linear-gradient(0deg, rgba(0,212,255,1) 25%, rgba(2,21,28,1) 100%);
+    height: 50px;
+}
+#logo-shadow{
+    z-index: 0;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(0,212,255);
+}
+#logoImg{
+    border-radius: 50%;
+    z-index: 2;
+    border: 2px solid #F6F1F1;
+}
+
+/*----------- NAV BAR -----------*/
+
+#nav-links button{
+    text-decoration: none;
+    color: #1885b8;
+    font-weight: 700;
+}
+
+/*----------- SEPERATOR ANIMATIONS -----------*/
+
+#seperator{
+    height: 2px;
+}
+#seperator > *{
+    background-color: rgb(135, 235, 255)
+}
+
+#seperator-mask-left{
+    width: 100%;
+    transform-origin: right;
+    animation: scale-to-left .8s ease-out forwards;
+}
+
+#seperator-mask-right{
+    width: 100%;
+    transform-origin: left;
+    animation: scale-to-right .8s ease-out forwards;
+}
+
+@keyframes scale-to-left {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(1.2);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+@keyframes scale-to-right {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(1.2);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }

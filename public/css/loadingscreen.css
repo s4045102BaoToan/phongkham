@@ -92,5 +92,5 @@ background: linear-gradient(90deg, rgba(92,216,247,1) 25%, rgba(62,222,255,1) 50
     }
 }
 .logo-fade-out{
-    animation: logo-fade-out 1s forwards;
+    animation: logo-fade-out .2s forwards linear;
 }
