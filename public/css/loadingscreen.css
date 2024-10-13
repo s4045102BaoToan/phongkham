@@ -1,7 +1,7 @@
 #loadingScreen{
 top: 0px;
 position: fixed;
-background: rgb(255,255,255);
+background: rgb(255, 255, 255);
 display: flex;
 }
 .loading-left{
@@ -12,9 +12,6 @@ display: flex;
     background: rgb(0,212,255);
     background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(2,21,28,1) 100%);
 }
-
-
-
 .all-content{
     display: none;
 }
@@ -46,6 +43,7 @@ background: linear-gradient(90deg, rgba(92,216,247,1) 25%, rgba(62,222,255,1) 50
 .spinning {
     animation: spinning linear 1.5s infinite;
 }
+
 /* Sliding animation */
 @keyframes slide-to-left {
     from{
@@ -55,7 +53,6 @@ background: linear-gradient(90deg, rgba(92,216,247,1) 25%, rgba(62,222,255,1) 50
         transform: translateX(-100%);
     }
 }
-
 @keyframes slide-to-right {
     from{
         transform: translateX(0);
@@ -65,8 +62,35 @@ background: linear-gradient(90deg, rgba(92,216,247,1) 25%, rgba(62,222,255,1) 50
     }
 }
 .slide-to-left{
-    animation: slide-to-left 1.5s infinite;
+    animation: slide-to-left 1.5s forwards;
 }
 .slide-to-right{
-    animation: slide-to-right 1.5s infinite;
+    animation: slide-to-right 1.5s forwards;
+}
+
+/*👉Background fade out animation👈*/
+@keyframes bg-fade-out {
+    from{
+        background-color: rgb(0, 0, 0, 1);
+    }
+    to{
+        background-color: rgb(0, 0, 0, 0);
+        display: none;
+    }
+}
+.bg-fade-out{
+    animation: bg-fade-out 1.5s forwards;
+}
+
+/*👉Logo animation👈*/
+@keyframes logo-fade-out {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.logo-fade-out{
+    animation: logo-fade-out 1s forwards;
 }
