@@ -1,7 +1,22 @@
 #loadingScreen{
+top: 0px;
+position: fixed;
 background: rgb(255,255,255);
-background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 0%, rgba(32,73,82,1) 100%);
+display: flex;
+}
+.loading-left{
+    background: rgb(2,21,28);
+    background: linear-gradient(90deg, rgba(2,21,28,1) 0%, rgba(0,212,255,1) 100%);
+}
+.loading-right{
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(2,21,28,1) 100%);
+}
 
+
+
+.all-content{
+    display: none;
 }
 #loadingImg{
     border-radius: 50%;
@@ -11,7 +26,7 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 0%
 }
 
 #loadingAnimation{
-    background: rgb(92,216,247);
+background: rgb(92,216,247);
 background: linear-gradient(90deg, rgba(92,216,247,1) 25%, rgba(62,222,255,1) 50%, rgba(28,74,84,1) 90%);
     border-radius: 50%;
     height: 160px;
@@ -30,4 +45,28 @@ background: linear-gradient(90deg, rgba(92,216,247,1) 25%, rgba(62,222,255,1) 50
 }
 .spinning {
     animation: spinning linear 1.5s infinite;
+}
+/* Sliding animation */
+@keyframes slide-to-left {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-to-right {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+.slide-to-left{
+    animation: slide-to-left 1.5s infinite;
+}
+.slide-to-right{
+    animation: slide-to-right 1.5s infinite;
 }

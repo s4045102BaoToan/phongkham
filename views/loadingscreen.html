@@ -15,10 +15,12 @@
     <title>Loading screen</title>
 </head>
 <body>
-    <div class="position-absolute d-flex align-items-center justify-content-center w-100 h-100" id="loadingScreen">
+    <div class="position-fixed d-flex align-items-center justify-content-center w-100 h-100" id="loadingScreen">
         <img src="/public/images/bayer.png" alt="Loading..." id="loadingImg">
+        <div class="loading-left h-100 w-50 slide-to-left"></div>
+        <div class="loading-right h-100 w-50 slide-to-right"></div>
         <div id="loadingAnimation" class="spinning"></div>
     </div>
-<script src="/public/javascript/loadingscreen.js"></script>
+
 </body>
 </html>
