@@ -34,41 +34,27 @@
         </div>
         <a href="index.html" class="z-1"><img class="m-2" src="/public/images/bayer.png" alt="Logo" height="65" id="logoImg"></a>
         
-        <div id="nav-links">
-            <button type="button" class="btn btn-link">Trang chủ</button>
-            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#dichVu">
-                Dịch vụ
-              </button>
+        <div class="w-75 d-flex justify-content-center" id="nav-links">
+            <button type="button" class="btn btn-link hover-highlight">Trang chủ</button>
+            <div id="dropdown-container">
+              <button id="dropdown-button" type="button" class="btn btn-link">Dịch vụ <span id="dropIcon">▼</span></button>
+              <!-- DROPDOWN -->
+              
+              <div class="p-2" id="dropdown">
+                <a href="">Khám phụ khoa</a>
+                <a href="">Kế hoạch hóa gia đình</a>
+                <a href="">Xét nghiệm</a>
+                
+              </div>
+            </div>
               <button type="button" class="btn btn-link">Tư vấn</button>
         </div>
 
+        <!-- SPERATOR -->
         <div class="w-75 d-flex justify-content-center" id="seperator">
           <div class="h-100" id="seperator-mask-left"></div>
           <div class="h-100" id="seperator-mask-right"></div>
         </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="dichVu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Dịch vụ</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <ul>
-            <li><a href="dichvu.html">Khám phụ khoa</a></li>
-            <li><a href="dichvu.html">Kế hoạch hóa gia đình</a></li>
-            <li><a href="dichvu.html">Xét nghiệm</a></li>
-            </ul>   
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  
-
-  
     </div>
 
     
