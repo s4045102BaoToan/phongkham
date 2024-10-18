@@ -47,19 +47,60 @@ body{
 
 /*----------- NAV BAR -----------*/
 /*👉sticky animation👈*/
+@supports (animation-timeline: view()) {
+    @keyframes fade-in {
+      from { 
+        opacity: 0;
+        position: fixed;
+    }
+      to { 
+        opacity: 1;
+        position: fixed;
+    }
+    }
+    
+    @keyframes shadow-in {
+      to { box-shadow: 0 10px 10px #0003 }
+    }
 
+    #fixed-nav-container, #fixed-nav-container > div {
+        animation: fade-in auto linear both;
+        animation-timeline: scroll();
+        animation-range: 120px 170px;
+      }
+      
+    #fixed-nav-container {
+        animation-name: shadow-in;
+      }
+  }
+  #nav-links-fixed{
+    background-color: #fffffff6;
+    border-radius: 0% 0% 10% 10% / 0% 0% 50% 50% ;
+    border-bottom: 2px solid #58caff;
+  }
+  #fixed-nav-container{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--surface);
+    padding: 2rem;
+  }
 
 
 
 /*👉Nav elements and animations👈*/
-#nav-links button{
+#nav-links button, #nav-links-fixed button{
     border-radius: 0%;
     text-decoration: none;
     color: #1885b8;
     font-weight: 700;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-#nav-links button:hover{
+#nav-links-fixed button{
+    font-size: 20px;
+    padding: 10px;
+}
+#nav-links button:hover, #nav-links-fixed button:hover{
     background-color: #e2e2e2;
     transform: scale(1.1);     
 }
@@ -140,7 +181,7 @@ body{
     height: 2px;
 }
 #seperator > *{
-    background-color: rgb(135, 235, 255)
+    background-color: rgb(135, 235, 255);
 }
 
 #seperator-mask-left{
