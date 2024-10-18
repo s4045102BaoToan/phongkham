@@ -13,3 +13,7 @@
 li{
     font-size: larger;
 }
+
+html{
+    scroll-behavior: smooth;
+}

@@ -74,9 +74,9 @@ body{
       }
   }
   #nav-links-fixed{
-    background-color: #fffffff6;
-    border-radius: 0% 0% 10% 10% / 0% 0% 50% 50% ;
-    border-bottom: 2px solid #58caff;
+    background-color: #ffffff;
+    
+    border-bottom: 3px solid #29bafd;
   }
   #fixed-nav-container{
     position: sticky;
@@ -95,6 +95,9 @@ body{
     color: #1885b8;
     font-weight: 700;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden; /* Optionally hide overflow if the container is smaller */
+    
 }
 #nav-links-fixed button{
     font-size: 20px;
@@ -178,7 +181,9 @@ body{
 /*----------- SEPERATOR ANIMATIONS -----------*/
 
 #seperator{
-    height: 2px;
+    height: 3px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 #seperator > *{
     background-color: rgb(135, 235, 255);
@@ -216,5 +221,35 @@ body{
     }
     100% {
         transform: scaleX(1);
+    }
+}
+
+/*-------------------------------PARALAX-------------------------------*/
+
+#intro{
+    background-image: url(/public/images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.parallax {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+  }
+#intro img{
+    animation: paralax linear;
+    animation-timeline: view();
+    animation-range: cover;
+}
+@keyframes paralax {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-100px);
     }
 }
