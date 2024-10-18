@@ -46,7 +46,12 @@ body{
 }
 
 /*----------- NAV BAR -----------*/
+/*👉sticky animation👈*/
 
+
+
+
+/*👉Nav elements and animations👈*/
 #nav-links button{
     border-radius: 0%;
     text-decoration: none;
@@ -63,28 +68,41 @@ body{
     z-index: 3;
     display: none;
     position: absolute;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(0, 50%);
     background-color: #f4f4f4;
     box-shadow: 0px 0px 19px 4px rgba(192,192,192,0.75);
     -webkit-box-shadow: 0px 0px 19px 4px rgba(192,192,192,0.75);
     -moz-box-shadow: 0px 0px 19px 4px rgba(192,192,192,0.75);
 }
-#dropdown-mask{
-    position: absolute;
-    background-color: #f4f4f4;
-    height: 100%;
-    width: 100%;
-}
-#dropdown a{
+
+#dropdown > *{
     display: block;
     text-decoration: none;
     color: #1885b8;
     min-width: 180px;
-    padding: 3px;
+    padding: 5px;
     font-weight: 500;
+    font-size: 30px;
     transition: background-color 300ms ease, transform 300ms ease;
 }
-#dropdown-container:hover #dropdown{
+#dropdown div{
+    text-decoration: none;
+    color: #1885b8;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 3px;
+    border-bottom: 1px solid #1885b8;
+}
+
+
+/*👉#dropdown-container:hover #dropdown{
   display: block;
+}👈*/
+#dropdown.active{
+    display: block;
 }
 #dropdown a:hover{
     background-color: #e2e2e2;
