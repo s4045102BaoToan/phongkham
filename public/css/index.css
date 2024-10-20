@@ -80,6 +80,7 @@ body{
   }
   #fixed-nav-container{
     position: sticky;
+    position: -webkit-sticky; /*safari sticky  */
     top: 0;
     z-index: 1;
     background: var(--surface);
@@ -238,10 +239,10 @@ body{
     font-weight: bold;
     font-family: Montserrat, sans-serif;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vh;  
   }
 #intro img{
-    animation: paralax linear;
+    animation: paralax 1s ease-in-out;
     animation-timeline: view();
     animation-range: cover;
 }

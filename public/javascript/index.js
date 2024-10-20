@@ -1,5 +1,6 @@
-const navContainer = document.querySelector("#nav-links");
-const navItems = navContainer.children;
-navItems.forEach(child => {
-    
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollSmoother.create({
+  smooth: 1, // Smoother scroll, higher value for more smoothness
+  effects: true // Apply effects like parallax scrolling
 });
