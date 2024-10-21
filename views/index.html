@@ -48,18 +48,16 @@
             <button type="button" class="btn btn-link hover-highlight">Trang chủ</button>
             <div id="dropdown-container" class="">
               <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span id="dropIcon">▼</span></button>
-              <!-- DROPDOWN -->
-              
-              <div class="p-2 w-100 h-100" id="dropdown">
-                <div class="d-flex justify-content-between">Dịch vụ<span onclick="closeDropdown()">✖</span></div> 
-                <a href="">Khám phụ khoa</a>
-                <a href="">Kế hoạch hóa gia đình</a>
-                <a href="">Xét nghiệm</a>  
-              </div>
             </div>
               <button type="button" class="btn btn-link">Tư vấn</button>
         </div>
-        
+        <!-- DROPDOWN position fixed so it should be outside -->
+        <div class="p-2 w-100 h-100" id="dropdown">
+          <div class="d-flex justify-content-between">Dịch vụ<span onclick="closeDropdown()">✖</span></div> 
+          <a href="">Khám phụ khoa</a>
+          <a href="">Kế hoạch hóa gia đình</a>
+          <a href="">Xét nghiệm</a>  
+        </div>
         
         
 
@@ -76,10 +74,10 @@
     <div>
       <!-- giới thiệu -->
      <div class="container parallax" id="intro">
-     <div class="text-center m-2 ">
-     <h1>Phòng khám</h1>
-     <h1>Bác sĩ Trương Thị Thành</h1>
-     <div>Sau 21 năm hoạt động, phòng khám của bác sĩ Trương Thị Thành đã đạt được nhiều thành tựu nổi bật, giúp điều trị vô sinh và cải thiện chất lượng đời sống tình dục cho hàng nghìn bệnh nhân.</div>
+     <div class="text-center m-2">
+     <h1 class="fw-bold">Phòng khám</h1>
+     <h1 class="fw-bold" >Bác sĩ <br>Trương Thị Thành</h1>
+     <div class="fst-italic">Sau 21 năm hoạt động, phòng khám của bác sĩ Trương Thị Thành đã đạt được nhiều thành tựu nổi bật, giúp điều trị vô sinh và cải thiện chất lượng đời sống tình dục cho hàng nghìn bệnh nhân.</div>
     </div>
     <!-- <img src="/public/images/banner.jpg" alt="banner phong kham" width="100%"> -->
     </div>
@@ -98,7 +96,7 @@
       <!-- content -->
       <!-- Khám phụ khoa -->
       <div class="d-flex justify-content-between my-2">
-        <img src="/public/images/placeholder.png" alt="placeholder" width="40%" class="ms-3">
+        <img src="/public/images/placeholder.png" alt="placeholder" width="40%" class="ms-3 my-auto">
         <div class="me-3">
           <h1>Khám phụ khoa</h1>
           <ul id="dichvuLists">
@@ -124,7 +122,7 @@
       </div>
       <!-- Xét nghiệm -->
       <div class="d-flex justify-content-between mt-2">
-        <img src="/public/images/placeholder.png" alt="placeholder" width="40%" class="ms-3">
+        <img src="/public/images/placeholder.png" alt="placeholder" width="40%" class="ms-3 my-auto">
         <div class="me-3">
           <h1>Xét nghiệm</h1>
           <ul id="dichvuLists">

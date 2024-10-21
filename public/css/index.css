@@ -110,9 +110,8 @@ body{
 }
 
 #dropdown{
-    z-index: 3;
+    z-index: 10;
     display: none;
-    position: absolute;
     position: fixed;
     left: 0;
     top: 0;
@@ -148,6 +147,8 @@ body{
 }👈*/
 #dropdown.active{
     display: block;
+    position: fixed;
+    z-index: 10;
 }
 #dropdown a:hover{
     background-color: #e2e2e2;
@@ -232,6 +233,14 @@ body{
     background-size: cover;
     background-position: center;
 }
+#intro > div{
+    color: #e2e2e2;
+    background-color: #00000062;
+    font-weight: 700;
+    padding: 30px;
+    border-radius: 5%;
+}
+
 .parallax {
     display: flex;
     align-items: center;
