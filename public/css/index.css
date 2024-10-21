@@ -75,7 +75,6 @@ body{
   }
   #nav-links-fixed{
     background-color: #ffffff;
-    
     border-bottom: 3px solid #29bafd;
   }
   #fixed-nav-container{
@@ -262,4 +261,8 @@ body{
     to{
         transform: translateY(-100px);
     }
+}
+
+@media screen {
+    
 }
