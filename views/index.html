@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- css -->
-    <link rel="stylesheet" href="/public/css/color.css">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <link rel="stylesheet" href="/public/css/index.css">
-    <!-- animations -->
-     <link rel="stylesheet" href="/public/css/animation.css">
-     <link rel="stylesheet" href="/public/css/loadingscreen.css">
-    <title>Trang chủ</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- css -->
+  <link rel="stylesheet" href="/public/css/color.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/index.css">
+  <!-- animations -->
+  <link rel="stylesheet" href="/public/css/animation.css">
+  <link rel="stylesheet" href="/public/css/loadingscreen.css">
+  <title>Trang chủ</title>
 </head>
 
 <body>
   <!-- LOADING SCREEN -->
   <div class="position-fixed align-items-center justify-content-center w-100 h-100" id="loadingScreen">
-    <img src="/public/images/bayer.png" alt="Loading..." class="" id="loadingImg" >
+    <img src="/public/images/bayer.png" alt="Loading..." class="" id="loadingImg">
     <div id="loadingAnimation" class="spinning"></div>
     <div class="loading-left h-100 w-50" id="left"></div>
     <div class="loading-right h-100 w-50" id="right"></div>
-</div>
+  </div>
   <!-- ALL OF CONTENT -->
   <div class="background-white all-content">
 
@@ -31,168 +33,154 @@
       <div class="w-100 d-flex justify-content-center d-sm-none d-md-none" id="nav-links-fixed">
         <button type="button" class="btn btn-link hover-highlight">Trang chủ</button>
         <div id="dropdown-container">
-          <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span id="dropIcon">▼</span></button>
+          <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span
+              id="dropIcon">▼</span></button>
         </div>
-          <button type="button" class="btn btn-link">Tư vấn</button>
+        <button type="button" class="btn btn-link">Tư vấn</button>
+      </div>
     </div>
-  </div>
     <!-- navbar -->
     <div class="d-flex flex-column align-items-center">
-        <div id="logo-container" class="w-100"></div>
-        <div class="" id="logo-shadow">
-          <img class="m-2" src="/public/images/bayer.png" alt="Logo" height="65" id="logoImg">
-        </div>
-        <a href="index.html" class="z-1"><img class="m-2" src="/public/images/bayer.png" alt="Logo" height="65" id="logoImg"></a>
-        
-        
-        <!-- DROPDOWN position fixed so it should be outside -->
-        
-        
-        
-
-        <!-- SPERATOR -->
-        
-    </div>
-  <div class="h-100 d-flex flex-column align-items-center position-sticky top-0 bg-white pt-2">
-    <div class="w-75 d-flex justify-content-center" id="nav-links">
-      <button type="button" class="btn btn-link hover-highlight">Trang chủ</button>
-      <div id="dropdown-container" class="">
-        <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span id="dropIcon">▼</span></button>
+      <div id="logo-container" class="w-100"></div>
+      <div class="" id="logo-shadow">
+        <img class="m-2" src="/public/images/bayer.png" alt="Logo" height="65" id="logoImg">
       </div>
+      <a href="index.html" class="z-1"><img class="m-2" src="/public/images/bayer.png" alt="Logo" height="65"
+          id="logoImg"></a>
+    </div>
+    <!-- DROPDOWN position fixed so it should be outside -->
+    <div class="h-100 d-flex flex-column align-items-center position-sticky top-0 bg-white pt-2 z-3">
+      <div class="w-75 d-flex justify-content-center" id="nav-links">
+        <button type="button" class="btn btn-link hover-highlight">Trang chủ</button>
+        <div id="dropdown-container" class="">
+          <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span
+              id="dropIcon">▼</span></button>
+        </div>
         <button type="button" class="btn btn-link">Tư vấn</button>
+      </div>
+      <!-- SPERATOR -->
+      <div class="w-75 d-flex justify-content-center" id="seperator">
+        <div class="h-100" id="seperator-mask-left"></div>
+        <div class="h-100" id="seperator-mask-right"></div>
+      </div>
     </div>
-    <div class="w-75 d-flex justify-content-center" id="seperator">
-      <div class="h-100" id="seperator-mask-left"></div>
-      <div class="h-100" id="seperator-mask-right"></div>
-    </div>
-  </div>
     <div class="p-2 w-100 h-100" id="dropdown">
-      <div class="d-flex justify-content-between">Dịch vụ<span onclick="closeDropdown()">✖</span></div> 
+      <div class="d-flex justify-content-between">Dịch vụ<span onclick="closeDropdown()">✖</span></div>
       <a href="">Khám phụ khoa</a>
       <a href="">Kế hoạch hóa gia đình</a>
-      <a href="">Xét nghiệm</a>  
+      <a href="">Xét nghiệm</a>
     </div>
-    
+
 
     <!-- BODY -->
     <div>
       <!-- giới thiệu -->
-     <div class="container parallax" id="intro">
-     <div class="text-center m-2">
-     <h1 class="fw-bold">Phòng khám</h1>
-     <h1 class="fw-bold" >Bác sĩ <br>Trương Thị Thành</h1>
-     <div class="fst-italic">Sau 21 năm hoạt động, phòng khám của bác sĩ Trương Thị Thành đã đạt được nhiều thành tựu nổi bật, giúp điều trị vô sinh và cải thiện chất lượng đời sống tình dục cho hàng nghìn bệnh nhân.</div>
-    </div>
-    <!-- <img src="/public/images/banner.jpg" alt="banner phong kham" width="100%"> -->
-    </div>
-
-    <!-- PARALAX CONTAINER -->
-    
-
-    <!-- color gradient --> 
-    <div id="whiteToHeavyTealGradient"></div>
-    <!-- dịch vụ chính -->
-    <div class="background-heavy-teal text text-white">
-      <!-- title -->
-      <div class="text-center pb-5">
-        <h1 class="m-0 fw-bold fst-italic">Dịch vụ</h1>
+      <div class="container parallax" id="intro">
+        <div class="text-center m-2">
+          <h1 class="fw-bold">Phòng khám</h1>
+          <h1 class="fw-bold">Bác sĩ <br>Trương Thị Thành</h1>
+          <div class="fst-italic">Sau 21 năm hoạt động, phòng khám của bác sĩ Trương Thị Thành đã đạt được nhiều thành
+            tựu nổi bật, giúp điều trị vô sinh và cải thiện chất lượng đời sống tình dục cho hàng nghìn bệnh nhân.</div>
+        </div>
+        <!-- <img src="/public/images/banner.jpg" alt="banner phong kham" width="100%"> -->
       </div>
-      <!-- content -->
 
-      <!-- pill tab -->
-      <div class="d-flex justify-content-between m-2 p-3 rounded-5 background-dark-teal">
+      <!-- PARALAX CONTAINER -->
+
+
+      <!-- color gradient -->
+
+      <!-- dịch vụ chính -->
+      <div class="background-heavy-teal text text-white">
+        <!-- title -->
+        <div id="dichvuStart" class="text-center h-auto">
+          <div class="top-0 z-3" id="whiteToHeavyTealGradient"></div>
+          <h1 class="animation-slide-right m-0 fst-italic">Dịch vụ</h1>
+          <div class="bottom-0 z-3 opacity-0" id="whiteToHeavyTealGradient"></div>
+        </div>
+        <!-- content -->
+
+        <!-- pill tab -->
+        <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
+          <div class="w-100">
+            <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Khám phụ khoa</h1>
+            <ul class="" id="dichvuLists">
+              <li>Siêu âm</li>
+              <li>Khám thai</li>
+              <li>Khám phụ khoa</li>
+            </ul>
+            <p class="link text-center"><a class="text-decoration-none text-white" href="">Xem thêm</a></p>
+          </div>
+          <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
+        </div>
+        <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
+          <div class="w-100">
+            <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Khám phụ khoa</h1>
+            <ul class="" id="dichvuLists">
+              <li>Siêu âm</li>
+              <li>Khám thai</li>
+              <li>Khám phụ khoa</li>
+            </ul>
+            <p class="link text-center"><a class="text-decoration-none text-white" href="">Xem thêm</a></p>
+          </div>
+          <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
+        </div>
+        <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
+          <div class="w-100">
+            <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Khám phụ khoa</h1>
+            <ul class="" id="dichvuLists">
+              <li>Siêu âm</li>
+              <li>Khám thai</li>
+              <li>Khám phụ khoa</li>
+            </ul>
+            <p class="link text-center"><a class="text-decoration-none text-white" href="">Xem thêm</a></p>
+          </div>
+          <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
+        </div>
+
         
-        <div class="me-3">
-          <h1>Khám phụ khoa</h1>
-          <ul id="dichvuLists">
-            <li>Siêu âm</li>
-            <li>Khám thai</li>
-            <li>Khám phụ khoa</li>
-            <p class="text-center">Xem thêm</p>
-          </ul>
-        </div>
-        <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div>
+
+        
       </div>
 
-      <!-- Khám phụ khoa -->
-      <div class="d-flex justify-content-between my-2">
-        <img src="/public/images/placeholder.png" alt="placeholder" width="40%" class="ms-3 my-auto">
-        <div class="me-3">
-          <h1>Khám phụ khoa</h1>
-          <ul id="dichvuLists">
-            <li>Siêu âm</li>
-            <li>Khám thai</li>
-            <li>Khám phụ khoa</li>
-            <p class="text-center">Xem thêm</p>
-          </ul>
-        </div>
-      </div>
-      <!-- Kế hoạch hóa gia đình -->
-      <div class="d-flex justify-content-between my-2">
-        <div class="ms-3">
-          <h1>Kế hoạch hóa gia đình</h1>
-          <ul id="dichvuLists">
-            <li>Siêu âm</li>
-            <li>Khám thai</li>
-            <li>Khám phụ khoa</li>
-            <p class="text-center">Xem thêm</p>
-          </ul>
-        </div>
-        <img src="/public/images/placeholder.png" alt="placeholder" width="40%" height="100%" class="me-3 my-auto">
-      </div>
-      <!-- Xét nghiệm -->
-      <div class="d-flex justify-content-between mt-2">
-        <img src="/public/images/placeholder.png" alt="placeholder" width="40%" class="ms-3 my-auto">
-        <div class="me-3">
-          <h1>Xét nghiệm</h1>
-          <ul id="dichvuLists">
-            <li>Siêu âm</li>
-            <li>Khám thai</li>
-            <li>Khám phụ khoa</li>
-            <p class="text-center">Xem thêm</p>
-          </ul>
-        </div>
-      </div>
-    </div>
+      <!-- teal to whtie gradient -->
+      <div id="heavyTealToWhiteGradient"></div>
 
-    <!-- teal to whtie gradient -->
-    <div id="heavyTealToWhiteGradient"></div>
-
-    <!-- Giới thiệu đội ngũ --> 
-    <div class="container">
-    <div class="text-center pb-5">
-      <h1 class="m-0">Về chúng tôi</h1>
-    </div>
-      <!-- Hình nhân viên -->
-      <div class="d-flex animated-section" id="staff-wrapper" data-animation-class="bottom-fade-in">
-        <div class="border border-dark w-100" id="staffImg">1</div>
-        <div class="border border-dark w-100" id="staffImg">2</div>
-        <div class="border border-dark w-100" id="staffImg">3</div>
-        <div class="border border-dark w-100" id="staffImg">4</div>
-        <div class="border border-dark w-100" id="staffImg">5</div>
-      </div>
-    <!-- content -->
-      <div class="row m-1 animated-section" id="qualities" data-animation-class="bottom-fade-in">
-        <div class="col-4 d-flex flex-column align-items-center">
-          <img src="/public/images/21.png" alt="" width="40">
-          <div class="text-justify">
-            Hơn 21 năm kinh nghiệm trong ngành phụ sản/ hiếm muộn
+      <!-- Giới thiệu đội ngũ -->
+      <div class="container">
+        <div class="text-center pb-5">
+          <h1 class="m-0">Về chúng tôi</h1>
+        </div>
+        <!-- Hình nhân viên -->
+        <div class="d-flex animated-section" id="staff-wrapper" data-animation-class="bottom-fade-in">
+          <div class="border border-dark w-100" id="staffImg">1</div>
+          <div class="border border-dark w-100" id="staffImg">2</div>
+          <div class="border border-dark w-100" id="staffImg">3</div>
+          <div class="border border-dark w-100" id="staffImg">4</div>
+          <div class="border border-dark w-100" id="staffImg">5</div>
+        </div>
+        <!-- content -->
+        <div class="row-animation row m-1 animated-section" id="qualities" data-animation-class="bottom-fade-in">
+          <div class="animation-slide-up col-4 d-flex flex-column align-items-center">
+            <img src="/public/images/21.png" alt="" width="40">
+            <div class="text-center">
+              Hơn 21 năm kinh nghiệm trong ngành phụ sản/ hiếm muộn
+            </div>
           </div>
-        </div>
-        <div class="col-4 d-flex flex-column align-items-center bottom-fade-in">
-          <img src="/public/images/certificate.png" alt="" width="40">
-          <div class="text-justify">
-            Các bác sĩ, y tá được cấp phép hoạt động bởi bộ y tế
+          <div class="animation-slide-up col-4 d-flex flex-column align-items-center">
+            <img src="/public/images/certificate.png" alt="" width="40">
+            <div class="text-center">
+              Các bác sĩ, y tá được cấp phép hoạt động bởi bộ y tế
+            </div>
           </div>
-        </div>
-        <div class="col-4 d-flex flex-column align-items-center">
-          <img src="/public/images/caring.png" alt="" width="40">
-          <div class="text-justify">
-            Sẵn sàng lắng nghe, thấu hiểu và tận tâm với bệnh nhân
+          <div class="animation-slide-up col-4 d-flex flex-column align-items-center">
+            <img src="/public/images/caring.png" alt="" width="40">
+            <div class="text-center">
+              Sẵn sàng lắng nghe, thấu hiểu và tận tâm với bệnh nhân
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
       <!-- Cơ sở vật chất -->
       <div class="container">
@@ -201,26 +189,37 @@
       </div>
 
       <!-- footer -->
-       
+
       <div>
         <h1>Footer</h1>
         Image sources<br>
-        <a href="https://www.flaticon.com/free-icons/caring" title="caring icons">Caring icons created by piksart - Flaticon</a><br>
-        <a href="https://www.flaticon.com/free-icons/certificate" title="certificate icons">Certificate icons created by Smashicons - Flaticon</a><br>
-        <a href="https://www.flaticon.com/free-icons/21" title="21 icons">21 icons created by Tanah Basah - Flaticon</a><br>
+        <a href="https://www.flaticon.com/free-icons/caring" title="caring icons">Caring icons created by piksart -
+          Flaticon</a><br>
+        <a href="https://www.flaticon.com/free-icons/certificate" title="certificate icons">Certificate icons created by
+          Smashicons - Flaticon</a><br>
+        <a href="https://www.flaticon.com/free-icons/21" title="21 icons">21 icons created by Tanah Basah -
+          Flaticon</a><br>
       </div>
       <div></div>
+    </div>
   </div>
-</div>
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- javascripts -->
-     <script src="/public/javascript/animation.js"></script>
-     <script src="/public/javascript/loadingscreen.js"></script>
-     <script src="/public/javascript/dropdownToggle.js"></script>
-     <script src="/public/javascript/paralax.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollSmoother.min.js"></script>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- javascripts -->
+  <!-- <script src="../public/javascript/animation.js"></script> -->
+  <script src="../public/javascript/loadingscreen.js"></script>
+  <script src="../public/javascript/dropdownToggle.js"></script>
+  <script src="../public/javascript/paralax.js"></script>
+  <script src="/public/javascript/scrollSaver.js"></script>
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- GSAP scroll trigger -->
+  <script src="../public/javascript/gsapScrollTrigger.js"></script>
+
 </body>
+
 </html>

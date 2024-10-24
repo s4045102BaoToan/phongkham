@@ -50,4 +50,5 @@ const observer = new IntersectionObserver(entries => {
 });
 
 //wahooo its working
+document.querySelectorAll('.animated-section').forEach(element => element.classList.add('out-of-view'));
 document.querySelectorAll('.animated-section').forEach(element => observer.observe(element));
