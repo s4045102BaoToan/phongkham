@@ -137,27 +137,26 @@
           </div>
           <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
         </div>
-
-        
-
-        
       </div>
 
       <!-- teal to whtie gradient -->
-      <div id="heavyTealToWhiteGradient"></div>
+      
 
       <!-- Giới thiệu đội ngũ -->
-      <div class="container">
-        <div class="text-center pb-5">
-          <h1 class="m-0">Về chúng tôi</h1>
+      <div class="">
+        <div id="veChungToi" class="text-center h-auto">
+          <div id="heavyTealToWhiteGradient"></div>
+          <h1 class="animation-slide-right m-0 fst-italic">Về chúng tôi</h1>
+          <div id="heavyTealToWhiteGradient" class="opacity-0"></div>
         </div>
+        <div class="container text-center">
+          Bác sĩ Thành chuyên khoa 1 phụ sản cùng đội ngũ nhân viên có bằng cấp đầy đủ, được bộ y tế cấp phép hoạt động. <br>
+          Chúng tôi luôn cập nhật những thông tin mới nhất về các vấn đề liên quan tới phụ sản thông qua hội thảo.
+        </div>
+       
         <!-- Hình nhân viên -->
-        <div class="d-flex animated-section" id="staff-wrapper" data-animation-class="bottom-fade-in">
-          <div class="border border-dark w-100" id="staffImg">1</div>
-          <div class="border border-dark w-100" id="staffImg">2</div>
-          <div class="border border-dark w-100" id="staffImg">3</div>
-          <div class="border border-dark w-100" id="staffImg">4</div>
-          <div class="border border-dark w-100" id="staffImg">5</div>
+        <div class="d-flex animated-section w-100" id="staff-wrapper" data-animation-class="bottom-fade-in">
+          <img src="/public/images/staff.png" class="w-100" alt="">
         </div>
         <!-- content -->
         <div class="row-animation row m-1 animated-section" id="qualities" data-animation-class="bottom-fade-in">
@@ -180,6 +179,27 @@
             </div>
           </div>
         </div>
+
+        <!-- Thời gian làm việc, địa chỉ, liên hệ -->
+         <div class="container">
+
+          <div class="m-auto my-3 w-75 d-flex justify-content-center" id="seperator">
+            <div class="h-100" id="seperator-mask-left"></div>
+            <div class="h-100" id="seperator-mask-right"></div>
+          </div>
+
+          <button class="toggleDropdownAboutUs btn btn-link text-black text-decoration-none" id="dropdown-button"><h1>Thời gian làm việc ➤</h1></button>
+          <div id="aboutUsDropdown" class="container">
+            Thứ 2 - thứ 7 hàng tuần: Buổi chiều từ 16:00 - 20:00. <br>
+            Chủ nhật không làm việc.
+          </div>
+         </div>
+         <div class="container">
+          <button class="toggleDropdownAboutUs btn btn-link text-black text-decoration-none" id="dropdown-button"><h1>Địa chỉ ➤</h1></button>
+          <div id="aboutUsDropdown" class="container">
+            Địa chỉ: <a href="https://maps.app.goo.gl/RdA6Bd1MVPkrhsog7">204 Đường Đ. Hoàng Diệu 2, Phường Linh Trung, Thủ Đức, Hồ Chí Minh, Vietnam</a>
+          </div>
+         </div>
       </div>
 
       <!-- Cơ sở vật chất -->
@@ -203,6 +223,12 @@
       <div></div>
     </div>
   </div>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- GSAP scroll trigger -->
+  <script src="../public/javascript/gsapScrollTrigger.js"></script>
+
   <!-- bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -211,14 +237,11 @@
   <!-- <script src="../public/javascript/animation.js"></script> -->
   <script src="../public/javascript/loadingscreen.js"></script>
   <script src="../public/javascript/dropdownToggle.js"></script>
+  <script src="../public/javascript/toggleDropdownAboutUs.js"></script>
   <script src="../public/javascript/paralax.js"></script>
   <script src="/public/javascript/scrollSaver.js"></script>
   
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <!-- GSAP scroll trigger -->
-  <script src="../public/javascript/gsapScrollTrigger.js"></script>
+  
 
 </body>
 

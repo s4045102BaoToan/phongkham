@@ -22,7 +22,7 @@ html{
     height: 50px;
 }
 #heavyTealToWhiteGradient{
-    background-image: linear-gradient( #19A7CE, #F6F1F1);
+    background-image: linear-gradient( #19A7CE, #ffffff);
     height: 50px;
 }
 
@@ -158,8 +158,8 @@ html{
 }
 
 #dropdown{
-    animation: growOut 300ms ease-in-out forwards;
-    transform-origin: top center
+    animation: slide-from-right .5s ease-in-out forwards;
+    transform-origin: center right;
 }
 #dropIcon{
     display: inline-block;
@@ -170,15 +170,12 @@ html{
     transform: rotate(0deg);
   }
 
-@keyframes growOut {
-     0% {
-        transform: scale(0)
-    }
-    80% {
-        transform: scale(1.1)
+@keyframes slide-from-right {
+    0%{
+        transform: translateX(100%);
     }
     100% {
-        transform: scale(1)
+        transform: translateY(0)
     }
 }
 
@@ -320,5 +317,28 @@ html{
     to{
        transform: scale(1.2) skew(-15deg);
        
+    }
+}
+
+#veChungToi h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+#aboutUsDropdown{
+    display: none;
+}
+#aboutUsDropdown.active{
+    display: block;
+    animation: expandAboutUs .5s forwards ;
+}
+@keyframes expandAboutUs {
+    from{
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+    to{
+        transform-origin: top;
+        transform: scaleY(1);
     }
 }
