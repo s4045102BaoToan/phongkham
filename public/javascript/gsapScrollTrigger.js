@@ -1,5 +1,7 @@
 // Register the ScrollTrigger plugin
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", () => {
+  
+
 gsap.registerPlugin(ScrollTrigger);
 
 // Animate the boxes on scroll based on Y position for testing 
@@ -85,4 +87,8 @@ gsap.utils.toArray('.row-animation').forEach(row =>{
   })
 });
 
-};// <- window.onload function, add code above this bracket
+});// <- window.onload function, add code above this bracket
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});

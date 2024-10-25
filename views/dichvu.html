@@ -1,69 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- css -->
-    <link rel="stylesheet" href="/public/css/color.css">
-    <title>Dịch vụ</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- css -->
+  <link rel="stylesheet" href="/public/css/color.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/index.css">
+  <!-- animations -->
+  <link rel="stylesheet" href="/public/css/animation.css">
+  <link rel="stylesheet" href="/public/css/loadingscreen.css">
+  <title>Dịch vụ</title>
 </head>
-<body class=" bg-dark-subtle">
+
+<body>
+  <!-- LOADING SCREEN -->
+  <div class="position-fixed align-items-center justify-content-center w-100 h-100" id="loadingScreen">
+    <img src="/public/images/bayer.png" alt="Loading..." class="" id="loadingImg">
+    <div id="loadingAnimation" class="spinning"></div>
+    <div class="loading-left h-100 w-50" id="left"></div>
+    <div class="loading-right h-100 w-50" id="right"></div>
+  </div>
+  <!-- ALL OF CONTENT -->
+  <div class="background-white all-content">
+
+    <div class="w-100 p-0 d-none" id="fixed-nav-container">
+      <div class="w-100 d-flex justify-content-center d-sm-none d-md-none" id="nav-links-fixed">
+        <button type="button" class="btn btn-link hover-highlight">Trang chủ</button>
+        <div id="dropdown-container">
+          <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span
+              id="dropIcon">▼</span></button>
+        </div>
+        <button type="button" class="btn btn-link">Tư vấn</button>
+      </div>
+    </div>
     <!-- navbar -->
     <div class="d-flex flex-column align-items-center">
-        <div>
-        <img src="/public/images/bayer.png" alt="Logo" height="65">
+      <div id="logo-container" class="w-100"></div>
+      <div class="" id="logo-shadow">
+        <img class="m-2" src="/public/images/bayer.png" alt="Logo" height="65" id="logoImg">
+      </div>
+      <a href="index.html" class="z-1"><img class="m-2" src="/public/images/bayer.png" alt="Logo" height="65"
+          id="logoImg"></a>
+    </div>
+    <!-- DROPDOWN position fixed so it should be outside -->
+    <div class="h-100 d-flex flex-column align-items-center position-sticky top-0 bg-white pt-2 z-3">
+      <div class="w-75 d-flex justify-content-center" id="nav-links">
+        <button type="button" class="btn btn-link hover-highlight">Trang chủ</button>
+        <div id="dropdown-container" class="">
+          <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span
+              id="dropIcon">▼</span></button>
         </div>
+        <button type="button" class="btn btn-link">Tư vấn</button>
+      </div>
+      <!-- SPERATOR -->
+      <div class="w-75 d-flex justify-content-center" id="seperator">
+        <div class="h-100" id="seperator-mask-left"></div>
+        <div class="h-100" id="seperator-mask-right"></div>
+      </div>
+    </div>
+    <div class="p-2 w-100 h-100" id="dropdown">
+      <div class="d-flex justify-content-between">Dịch vụ<span onclick="closeDropdown()">✖</span></div>
+      <a href="dichvu.html">Khám phụ khoa</a>
+      <a href="dichvu.html">Kế hoạch hóa gia đình</a>
+      <a href="dichvu.html">Xét nghiệm</a>
+    </div>
 
-        <div>
-            <button type="button" class="btn btn-link" onclick="window.location.href='index.html'" >Trang chủ</button>
-            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#dichVu">
-                Dịch vụ
-              </button>
-              <button type="button" class="btn btn-link">Tư vấn</button>
+
+    <!-- BODY -->
+    <div class="background-heavy-teal text text-white">
+      <!-- title -->
+      <div id="dichvuStart" class="text-center h-auto">
+        <div class="top-0 z-3" id="whiteToHeavyTealGradient"></div>
+        <h1 class="animation-slide-right m-0 fst-italic">Dịch vụ</h1>
+        <div class="bottom-0 z-3 opacity-0" id="whiteToHeavyTealGradient"></div>
+      </div>
+      <!-- content -->
+      <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
+        <div class="w-100">
+          <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Khám phụ khoa</h1>
+          <ul class="" id="dichvuLists">
+            <li>Siêu âm</li>
+            <li>Khám thai</li>
+            <li>Khám phụ khoa</li>
+          </ul>
+          <p class="link text-center"><a class="text-decoration-none text-white" href="">Xem thêm</a></p>
         </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="dichVu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Dịch vụ</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
+      </div>
+      <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
+        <div class="w-100">
+          <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Khám phụ khoa</h1>
+          <ul class="" id="dichvuLists">
+            <li>Siêu âm</li>
+            <li>Khám thai</li>
+            <li>Khám phụ khoa</li>
+          </ul>
+          <p class="link text-center"><a class="text-decoration-none text-white" href="">Xem thêm</a></p>
         </div>
-        <div class="modal-body">
-            <ul>
-            <li><a href="dichvu.html">Khám phụ khoa</a></li>
-            <li><a href="dichvu.html">Kế hoạch hóa gia đình</a></li>
-            <li><a href="dichvu.html">Xét nghiệm</a></li>
-            </ul>   
+        <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
+      </div>
+      <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
+        <div class="w-100">
+          <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Khám phụ khoa</h1>
+          <ul class="" id="dichvuLists">
+            <li>Siêu âm</li>
+            <li>Khám thai</li>
+            <li>Khám phụ khoa</li>
+          </ul>
+          <p class="link text-center"><a class="text-decoration-none text-white" href="">Xem thêm</a></p>
         </div>
-        
+        <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
       </div>
     </div>
   </div>
-    </div>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- GSAP scroll trigger -->
+  <script src="../public/javascript/gsapScrollTrigger.js"></script>
 
-    <!-- CONTENT -->
-    <div class="container">
-        <!-- HEADERS -->
-        <div class="p-2 background-light-teal fw-bold">
-            Khám phụ khoa
-        </div>
-        <!-- CONTENT -->
-        <div class="d-flex flex-row justify-content-between p-2 bg-light ms-3">
-        <div>
-            Siêu âm
-        </div>
-        <div>
-            180k
-        </div>
-        </div>
-    </div>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- javascripts -->
+  <!-- <script src="../public/javascript/animation.js"></script> -->
+  <script src="../public/javascript/loadingscreen.js"></script>
+  <script src="../public/javascript/dropdownToggle.js"></script>
+  <script src="../public/javascript/toggleDropdownAboutUs.js"></script>
+  <script src="../public/javascript/paralax.js"></script>
+  <script src="/public/javascript/scrollSaver.js"></script>
+  
+  
 
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>

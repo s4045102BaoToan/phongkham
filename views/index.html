@@ -66,9 +66,9 @@
     </div>
     <div class="p-2 w-100 h-100" id="dropdown">
       <div class="d-flex justify-content-between">Dịch vụ<span onclick="closeDropdown()">✖</span></div>
-      <a href="">Khám phụ khoa</a>
-      <a href="">Kế hoạch hóa gia đình</a>
-      <a href="">Xét nghiệm</a>
+      <a href="dichvu.html">Khám phụ khoa</a>
+      <a href="dichvu.html">Kế hoạch hóa gia đình</a>
+      <a href="dichvu.html">Xét nghiệm</a>
     </div>
 
 
@@ -84,12 +84,8 @@
         </div>
         <!-- <img src="/public/images/banner.jpg" alt="banner phong kham" width="100%"> -->
       </div>
-
       <!-- PARALAX CONTAINER -->
-
-
       <!-- color gradient -->
-
       <!-- dịch vụ chính -->
       <div class="background-heavy-teal text text-white">
         <!-- title -->
@@ -143,15 +139,14 @@
       
 
       <!-- Giới thiệu đội ngũ -->
-      <div class="">
+      <div id="heavyTealToWhiteGradient"></div>
+      <div class="container">
         <div id="veChungToi" class="text-center h-auto">
-          <div id="heavyTealToWhiteGradient"></div>
           <h1 class="animation-slide-right m-0 fst-italic">Về chúng tôi</h1>
           <div id="heavyTealToWhiteGradient" class="opacity-0"></div>
         </div>
-        <div class="container text-center">
+        <div class="animation-slide-right container text-center fw-bold">
           Bác sĩ Thành chuyên khoa 1 phụ sản cùng đội ngũ nhân viên có bằng cấp đầy đủ, được bộ y tế cấp phép hoạt động. <br>
-          Chúng tôi luôn cập nhật những thông tin mới nhất về các vấn đề liên quan tới phụ sản thông qua hội thảo.
         </div>
        
         <!-- Hình nhân viên -->
@@ -188,29 +183,38 @@
             <div class="h-100" id="seperator-mask-right"></div>
           </div>
 
-          <button class="toggleDropdownAboutUs btn btn-link text-black text-decoration-none" id="dropdown-button"><h1>Thời gian làm việc ➤</h1></button>
-          <div id="aboutUsDropdown" class="container">
+          <button class="toggleDropdownAboutUs btn btn-link text-black text-decoration-none" id="dropdown-button"><h1>Thời gian làm việc <span id="arrow">➤</span></h1></button>
+          <div id="aboutUsDropdown" class="ps-5">
             Thứ 2 - thứ 7 hàng tuần: Buổi chiều từ 16:00 - 20:00. <br>
             Chủ nhật không làm việc.
           </div>
          </div>
          <div class="container">
-          <button class="toggleDropdownAboutUs btn btn-link text-black text-decoration-none" id="dropdown-button"><h1>Địa chỉ ➤</h1></button>
-          <div id="aboutUsDropdown" class="container">
-            Địa chỉ: <a href="https://maps.app.goo.gl/RdA6Bd1MVPkrhsog7">204 Đường Đ. Hoàng Diệu 2, Phường Linh Trung, Thủ Đức, Hồ Chí Minh, Vietnam</a>
+          <button class="toggleDropdownAboutUs btn btn-link text-black text-decoration-none" id="dropdown-button"><h1>Địa chỉ <span id="arrow">➤</span></h1></button>
+          <div id="aboutUsDropdown" class="ps-5">
+            Địa chỉ: <a href="https://maps.app.goo.gl/RdA6Bd1MVPkrhsog7" target="_blank">204 Đường Đ. Hoàng Diệu 2, Phường Linh Trung, Thủ Đức, Hồ Chí Minh, Vietnam</a>
+          </div>
+         </div>
+         <div class="container">
+          <button class="toggleDropdownAboutUs btn btn-link text-black text-decoration-none" id="dropdown-button"><h1>Thông tin liên hệ<span id="arrow">➤</span></h1></button>
+          <div id="aboutUsDropdown" class="ps-5">
+            
           </div>
          </div>
       </div>
 
       <!-- Cơ sở vật chất -->
-      <div class="container">
-        <h1>Trang trang thiết bị hiện đại, không gian thoải mái, tiện nghi</h1>
-        <img src="/public/images/banner.jpg" alt="banner phong kham" width="100%">
-      </div>
+      
 
       <!-- footer -->
 
       <div>
+        
+      </div>
+      <div class="background-heavy-teal text text-white">
+        <div class="text-center h-auto">
+          <div class="top-0 z-3" id="whiteToHeavyTealGradient"></div>
+        </div>
         <h1>Footer</h1>
         Image sources<br>
         <a href="https://www.flaticon.com/free-icons/caring" title="caring icons">Caring icons created by piksart -
@@ -220,7 +224,6 @@
         <a href="https://www.flaticon.com/free-icons/21" title="21 icons">21 icons created by Tanah Basah -
           Flaticon</a><br>
       </div>
-      <div></div>
     </div>
   </div>
   <!-- GSAP -->

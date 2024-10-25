@@ -332,6 +332,20 @@ html{
     display: block;
     animation: expandAboutUs .5s forwards ;
 }
+#arrow{
+    display: inline-block;
+}
+#arrow.fadeOff{ 
+    display: inline-block;
+    animation: fadeOff .3s forwards;
+}
+@keyframes fadeOff {
+    to{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
 @keyframes expandAboutUs {
     from{
         transform-origin: top;
