@@ -18,7 +18,7 @@ html{
     scroll-behavior: smooth;
 }
 #whiteToHeavyTealGradient{
-    background-image: linear-gradient(#F6F1F1, #19A7CE);
+    background-image: linear-gradient(#ffffff, #19A7CE);
     height: 50px;
 }
 #heavyTealToWhiteGradient{

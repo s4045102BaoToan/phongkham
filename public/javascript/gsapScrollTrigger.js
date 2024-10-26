@@ -1,8 +1,11 @@
 // Register the ScrollTrigger plugin
 document.addEventListener("DOMContentLoaded", () => {
   
+setTimeout(() => {
+  console.log("waiting 3 seconds before registering scroll trigger")
 
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.refresh();
 
 // Animate the boxes on scroll based on Y position for testing 
 gsap.utils.toArray(".box").forEach(box => {
@@ -86,9 +89,24 @@ gsap.utils.toArray('.row-animation').forEach(row =>{
     }
   })
 });
+//dichvu.html animation
+gsap.utils.toArray('.animated-dichvu').forEach(item =>{
+  gsap.from(item, {
+    scale: .7,
+    transformOrigin: "0% 50%",
+    scrollTrigger:{
+      trigger: item,
+      start: 'top 75%',
+      end: 'top 25%',
+      toggleActions: "play none none reset",
+    }
+  })
+});
 
+}, 3000);// time out for registering scroll trigger
 });// <- window.onload function, add code above this bracket
 
 window.addEventListener("load", () => {
+  console.log('Scroll trigger refreshed ?')
   ScrollTrigger.refresh();
 });
