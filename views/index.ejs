@@ -9,29 +9,29 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- css -->
-  <link rel="stylesheet" href="/public/css/color.css">
-  <link rel="stylesheet" href="/public/css/style.css">
-  <link rel="stylesheet" href="/public/css/index.css">
+  <link rel="stylesheet" href="/css/color.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/index.css">
   <!-- animations -->
-  <link rel="stylesheet" href="/public/css/animation.css">
-  <link rel="stylesheet" href="/public/css/loadingscreen.css">
+  <link rel="stylesheet" href="/css/loadingscreen.css">
+  <link rel="stylesheet" href="/css/animation.css">
   <title>Trang chủ</title>
 </head>
 
 <body>
   <!-- LOADING SCREEN -->
   <div class="position-fixed align-items-center justify-content-center w-100 h-100" id="loadingScreen">
-    <img src="/public/images/bayer.png" alt="Loading..." class="" id="loadingImg">
+    <img src="/images/bayer.png" alt="Loading..." class="" id="loadingImg">
     <div id="loadingAnimation" class="spinning"></div>
     <div class="loading-left h-100 w-50" id="left"></div>
     <div class="loading-right h-100 w-50" id="right"></div>
   </div>
   <!-- ALL OF CONTENT -->
   <div class="background-white all-content">
-
+    <!-- This element has been removed -->
     <div class="w-100 p-0 d-none" id="fixed-nav-container">
       <div class="w-100 d-flex justify-content-center d-sm-none d-md-none" id="nav-links-fixed">
-        <button type="button" class="btn btn-link hover-highlight" >Trang chủ</button>
+        <button type="button" class="btn btn-link hover-highlight"><a href="/">Trang chủ</a></button>
         <div id="dropdown-container">
           <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span
               id="dropIcon">▼</span></button>
@@ -43,20 +43,20 @@
     <div class="d-flex flex-column align-items-center">
       <div id="logo-container" class="w-100"></div>
       <div class="" id="logo-shadow">
-        <img class="m-2" src="/public/images/bayer.png" alt="Logo" height="65" id="logoImg">
+        <img class="m-2" src="/images/bayer.png" alt="Logo" height="65" id="logoImg">
       </div>
-      <a href="index.html" class="z-1"><img class="m-2" src="/public/images/bayer.png" alt="Logo" height="65"
+      <a href="/" class="z-1"><img class="m-2" src="/images/bayer.png" alt="Logo" height="65"
           id="logoImg"></a>
     </div>
     <!-- DROPDOWN position fixed so it should be outside -->
     <div class="h-100 d-flex flex-column align-items-center position-sticky top-0 bg-white pt-2 z-3">
       <div class="w-75 d-flex justify-content-center" id="nav-links">
-        <button type="button" class="btn btn-link hover-highlight">Trang chủ</button>
+        <button type="button" class="btn btn-link hover-highlight"><a href="/" class="text-decoration-none">Trang chủ</a></button>
         <div id="dropdown-container" class="">
           <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span
               id="dropIcon">▼</span></button>
         </div>
-        <button type="button" class="btn btn-link">Tư vấn</button>
+        <button type="button" class="btn btn-link"><a href="/" class="text-decoration-none">Tư vấn</a></button>
       </div>
       <!-- SPERATOR -->
       <div class="w-75 d-flex justify-content-center" id="seperator">
@@ -66,9 +66,9 @@
     </div>
     <div class="p-2 w-100 h-100" id="dropdown">
       <div class="d-flex justify-content-between">Dịch vụ<span onclick="closeDropdown()">✖</span></div>
-      <a href="dichvu.html">Khám phụ khoa</a>
-      <a href="dichvu.html">Kế hoạch hóa gia đình</a>
-      <a href="dichvu.html">Xét nghiệm</a>
+      <a href="dichvu">Khám phụ khoa</a>
+      <a href="dichvu">Kế hoạch hóa gia đình</a>
+      <a href="dichvu">Xét nghiệm</a>
     </div>
 
 
@@ -82,7 +82,7 @@
           <div class="fst-italic">Sau 21 năm hoạt động, phòng khám của bác sĩ Trương Thị Thành đã đạt được nhiều thành
             tựu nổi bật, giúp điều trị vô sinh và cải thiện chất lượng đời sống tình dục cho hàng nghìn bệnh nhân.</div>
         </div>
-        <!-- <img src="/public/images/banner.jpg" alt="banner phong kham" width="100%"> -->
+        <!-- <img src="/images/banner.jpg" alt="banner phong kham" width="100%"> -->
       </div>
       <!-- PARALAX CONTAINER -->
       <!-- color gradient -->
@@ -105,7 +105,7 @@
               <li>Khám thai</li>
               <li>Khám phụ khoa</li>
             </ul>
-            <p class="link text-center"><a class="text-decoration-none text-white" href="">Xem thêm</a></p>
+            <p class="link text-center"><a class="text-decoration-none text-white" href="/dichvu">Xem thêm</a></p>
           </div>
           <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
         </div>
@@ -151,24 +151,24 @@
        
         <!-- Hình nhân viên -->
         <div class="d-flex animated-section w-100" id="staff-wrapper" data-animation-class="bottom-fade-in">
-          <img src="/public/images/staff.png" class="w-100" alt="">
+          <img src="/images/staff.png" class="w-100" alt="">
         </div>
         <!-- content -->
         <div class="row-animation row m-1 animated-section" id="qualities" data-animation-class="bottom-fade-in">
           <div class="animation-slide-up col-4 d-flex flex-column align-items-center">
-            <img src="/public/images/21.png" alt="" width="40">
+            <img src="/images/21.png" alt="" width="40">
             <div class="text-center">
               Hơn 21 năm kinh nghiệm trong ngành phụ sản/ hiếm muộn
             </div>
           </div>
           <div class="animation-slide-up col-4 d-flex flex-column align-items-center">
-            <img src="/public/images/certificate.png" alt="" width="40">
+            <img src="/images/certificate.png" alt="" width="40">
             <div class="text-center">
               Các bác sĩ, y tá được cấp phép hoạt động bởi bộ y tế
             </div>
           </div>
           <div class="animation-slide-up col-4 d-flex flex-column align-items-center">
-            <img src="/public/images/caring.png" alt="" width="40">
+            <img src="/images/caring.png" alt="" width="40">
             <div class="text-center">
               Sẵn sàng lắng nghe, thấu hiểu và tận tâm với bệnh nhân
             </div>
@@ -249,19 +249,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <!-- GSAP scroll trigger -->
-  <script src="../public/javascript/gsapScrollTrigger.js"></script>
+  <script src="../javascript/gsapScrollTrigger.js"></script>
 
   <!-- bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <!-- javascripts -->
-  <!-- <script src="../public/javascript/animation.js"></script> -->
-  <script src="../public/javascript/loadingscreen.js"></script>
-  <script src="../public/javascript/dropdownToggle.js"></script>
-  <script src="../public/javascript/toggleDropdownAboutUs.js"></script>
-  <script src="../public/javascript/paralax.js"></script>
-  <script src="/public/javascript/scrollSaver.js"></script>
+  <!-- <script src="../javascript/animation.js"></script> -->
+  <script src="/javascript/loadingscreen.js"></script>
+  <script src="/javascript/dropdownToggle.js"></script>
+  <script src="/javascript/toggleDropdownAboutUs.js"></script>
+  <script src="/javascript/paralax.js"></script>
+  <script src="/javascript/scrollSaver.js"></script>
   
   
 

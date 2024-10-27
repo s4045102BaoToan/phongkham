@@ -98,7 +98,7 @@ gsap.utils.toArray('.animated-dichvu').forEach(item =>{
       trigger: item,
       start: 'top 75%',
       end: 'top 25%',
-      toggleActions: "play none none reset",
+      toggleActions: "play none none reset",  
     }
   })
 });
