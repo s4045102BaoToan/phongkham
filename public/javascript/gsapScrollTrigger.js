@@ -92,12 +92,14 @@ gsap.utils.toArray('.row-animation').forEach(row =>{
 //dichvu.html animation
 gsap.utils.toArray('.animated-dichvu').forEach(item =>{
   gsap.from(item, {
-    scale: .7,
-    transformOrigin: "0% 50%",
+    scale: .8,
+    opacity: 0.2,
+    transformOrigin: "50% 50%",
     scrollTrigger:{
       trigger: item,
-      start: 'top 75%',
-      end: 'top 25%',
+      start: 'top 85%',
+      end: 'top 70%',
+      scrub: true,
       toggleActions: "play none none reset",  
     }
   })

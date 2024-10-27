@@ -7,6 +7,7 @@ require('dotenv').config();
 //create a mongo for dich vu items
 const sessionConfigs = require('./configs/session');
 const { error } = require('console');
+const { Dichvu } = require('./model');
 
 const app = express();
 const db = process.env.DATABASE;
@@ -27,6 +28,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session(sessionConfigs));
 
 // functions
+
+// index
 app.get("/", async(req, res) => {
     try{
         res.render('index');
@@ -35,9 +38,13 @@ app.get("/", async(req, res) => {
         res.status(500).send(error);
     }
 });
+// dich vu
 app.get('/dichvu', async(req, res) => {
     try{
-        res.render('dichvu')
+        const dichvuArray = await Dichvu.find();
+        // console.log(dichvuArray);
+        res.render('dichvu', {dichvuArray});
+        
     } catch(error){
         res.status(500).send(error);
     }

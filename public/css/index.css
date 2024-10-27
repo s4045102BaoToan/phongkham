@@ -361,3 +361,19 @@ html{
         transform: scaleY(1);
     }
 }
+
+/*👉overflow off👈*/
+.overflow-maxwidth-custom-disable{
+    text-wrap: wrap;
+    width: 180px;
+    display: block;
+    overflow: visible;
+}
+
+.overflow-maxwidth-custom{
+    white-space: nowrap;
+    overflow: hidden;       
+    text-overflow: ellipsis;
+    max-width: 55vw;                
+    display: block;
+}

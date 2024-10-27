@@ -20,56 +20,15 @@
 
 <body>
   <!-- LOADING SCREEN -->
-  <div class="position-fixed align-items-center justify-content-center w-100 h-100" id="loadingScreen">
-    <img src="/images/bayer.png" alt="Loading..." class="" id="loadingImg">
-    <div id="loadingAnimation" class="spinning"></div>
-    <div class="loading-left h-100 w-50" id="left"></div>
-    <div class="loading-right h-100 w-50" id="right"></div>
-  </div>
+  <%- include('partials/loadingscreen.ejs') %>
   <!-- ALL OF CONTENT -->
   <div class="background-white all-content">
-
-    <div class="w-100 p-0 d-none" id="fixed-nav-container">
-      <div class="w-100 d-flex justify-content-center d-sm-none d-md-none" id="nav-links-fixed">
-        <button type="button" class="btn btn-link hover-highlight">Trang chủ</button>
-        <div id="dropdown-container">
-          <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span
-              id="dropIcon">▼</span></button>
-        </div>
-        <button type="button" class="btn btn-link">Tư vấn</button>
-      </div>
-    </div>
-    <!-- navbar -->
-    <div class="d-flex flex-column align-items-center">
-      <div id="logo-container" class="w-100"></div>
-      <div class="" id="logo-shadow">
-        <img class="m-2" src="/images/bayer.png" alt="Logo" height="65" id="logoImg">
-      </div>
-      <a href="/" class="z-1"><img class="m-2" src="/images/bayer.png" alt="Logo" height="65"
-          id="logoImg"></a>
-    </div>
-    <!-- DROPDOWN position fixed so it should be outside -->
-    <div class="h-100 d-flex flex-column align-items-center position-sticky top-0 bg-white pt-2 z-3">
-      <div class="w-75 d-flex justify-content-center" id="nav-links">
-        <button type="button" class="btn btn-link hover-highlight">Trang chủ</button>
-        <div id="dropdown-container" class="">
-          <button id="dropdown-button" type="button" class="btn btn-link" onclick="toggleDropdown()">Dịch vụ <span
-              id="dropIcon">▼</span></button>
-        </div>
-        <button type="button" class="btn btn-link">Tư vấn</button>
-      </div>
-      <!-- SPERATOR -->
-      <div class="w-75 d-flex justify-content-center" id="seperator">
-        <div class="h-100" id="seperator-mask-left"></div>
-        <div class="h-100" id="seperator-mask-right"></div>
-      </div>
-    </div>
-    <div class="p-2 w-100 h-100" id="dropdown">
-      <div class="d-flex justify-content-between">Dịch vụ<span onclick="closeDropdown()">✖</span></div>
-      <a href="dichvu">Khám phụ khoa</a>
-      <a href="dichvu.html">Kế hoạch hóa gia đình</a>
-      <a href="dichvu.html">Xét nghiệm</a>
-    </div>
+    <!-- this nav bar has been disabled -->
+    <%- include('partials/disabled-navbar.ejs') %>
+    <!-- navbar current-->
+    <%- include('partials/nav-bar.ejs') %>
+    
+    
 
 
     <!-- BODY -->
@@ -81,62 +40,63 @@
         <div class="bottom-0 z-3 opacity-0" id="whiteToHeavyTealGradient"></div>
       </div>
       <!-- content -->
+
+      <!-- function for converting 1000 to 1.000 -->
+      <% function formatNumberToCustomDecimal(value) {
+        // Convert number to string and format it
+        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); // Replace comma with period
+      } %>
+      <!-------------------------- Khám phụ khoa -------------------------->
       <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
         <div class="w-100">
           <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Khám phụ khoa</h1>
-          <div class="animated-dichvu d-flex">
-            <div class="mx-3 text-nowrap"><h4 class="my-1">Siêu âm</h4></div>
-            <div class="border-bottom border-2 border-white w-100 mx-0"></div>
-            <div class="mx-3 me-4 "><h4 class="my-1">180k</h4></div>
-          </div>
-          <div class="animated-dichvu d-flex">
-            <div class="mx-3 text-nowrap"><h4 class="my-1">Siêu âm</h4></div>
-            <div class="border-bottom border-2 border-white w-100 mx-0"></div>
-            <div class="mx-3 me-4 "><h4 class="my-1">180k</h4></div>
-          </div>
-          <div class="animated-dichvu d-flex">
-            <div class="mx-3 text-nowrap"><h4 class="my-1">Siêu âm</h4></div>
-            <div class="border-bottom border-2 border-white w-100 mx-0"></div>
-            <div class="mx-3 me-4 "><h4 class="my-1">180k</h4></div>
-          </div>
-          <div class="animated-dichvu d-flex">
-            <div class="mx-3 text-nowrap"><h4 class="my-1">Siêu âm</h4></div>
-            <div class="border-bottom border-2 border-white w-100 mx-0"></div>
-            <div class="mx-3 me-4 "><h4 class="my-1">180k</h4></div>
-          </div>
-          <div class="animated-dichvu d-flex">
-            <div class="mx-3 text-nowrap"><h4 class="my-1">Siêu âm</h4></div>
-            <div class="border-bottom border-2 border-white w-100 mx-0"></div>
-            <div class="mx-3 me-4 "><h4 class="my-1">180k</h4></div>
-          </div>
-          
+          <% for(item of dichvuArray){ %>
+            <% if(item.class === "KPK"){%>
+            <div class="animated-dichvu d-flex mb-3" onclick="toggleOverflow(event)">
+              <div class="mx-3 text-nowrap"><h4 class="my-1 overflow-maxwidth-custom"><%= item.name %></h4></div>
+              <div class="border-bottom border-2 border-white w-100 mx-0"></div>
+              <div class="mx-3 me-4 "><h4 class="my-1"><%= formatNumberToCustomDecimal(parseInt(item.price)/ 1000)%>K</h4></div>
+            </div>
+            <% }} %>
         </div>
         <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
       </div>
+      <!-------------------------- Kế hoạch hóa gia đình -------------------------->
       <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
         <div class="w-100">
-          <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Khám phụ khoa</h1>
-          <ul class="" id="dichvuLists">
-            <li>Siêu âm</li>
-            <li>Khám thai</li>
-            <li>Khám phụ khoa</li>
-          </ul>
-          <p class="link text-center"><a class="text-decoration-none text-white" href="">Xem thêm</a></p>
+          <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Kế hoạch hóa gia đình
+          </h1>
+          <% for(item of dichvuArray){ %>
+            <% if(item.class === "KHHGD"){%>
+            <div class="animated-dichvu d-flex mb-3" onclick="toggleOverflow(event)">
+              <div class="mx-3 text-nowrap"><h4 class="my-1 overflow-maxwidth-custom"><%= item.name %></h4></div>
+              <div class="border-bottom border-2 border-white w-100 mx-0"></div>
+              <div class="mx-3 me-4 "><h4 class="my-1"><%= formatNumberToCustomDecimal(parseInt(item.price)/ 1000)%>K</h4></div>
+            </div>
+            <% }} %>
         </div>
         <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
       </div>
+
+      <!-------------------------- Xét nghiệm -------------------------->
       <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
         <div class="w-100">
-          <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Khám phụ khoa</h1>
-          <ul class="" id="dichvuLists">
-            <li>Siêu âm</li>
-            <li>Khám thai</li>
-            <li>Khám phụ khoa</li>
-          </ul>
-          <p class="link text-center"><a class="text-decoration-none text-white" href="">Xem thêm</a></p>
+          <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Xét nghiệm
+          </h1>
+          <% for(item of dichvuArray){ %>
+            <% if(item.class === "XN"){%>
+            <div class="animated-dichvu d-flex mb-3" onclick="toggleOverflow(event)">
+              <div class="mx-3 text-nowrap"><h4 class="my-1 overflow-maxwidth-custom"><%= item.name %></h4></div>
+              <div class="border-bottom border-2 border-white w-100 mx-0"></div>
+              <div class="mx-3 me-4 "><h4 class="my-1"><%= formatNumberToCustomDecimal(parseInt(item.price)/ 1000)%>K</h4></div>
+            </div>
+            <% }} %>
         </div>
         <!-- <div class="align-content-center fw-bolder fs-1">≫ . ⋙</div> -->
       </div>
+
+      <!----------------------------- footer ----------------------------->
+      <%- include('partials/footer.ejs') %>
     </div>
   </div>
   <!-- GSAP -->
@@ -154,6 +114,7 @@
   <script src="/javascript/loadingscreen.js"></script>
   <script src="/javascript/dropdownToggle.js"></script>
   <script src="/javascript/scrollSaver.js"></script>
+  <script src="/javascript/dichvu.js"></script>
   
   
 
