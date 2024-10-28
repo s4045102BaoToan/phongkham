@@ -13,13 +13,13 @@ window.addEventListener('load', function() {
         spinner.classList.add('logo-fade-out');
         left.classList.add('slide-to-left');
         right.classList.add('slide-to-right');
-    }, 1); //stock time is 3000
+    }, 3000); //stock time is 3000
     setTimeout(() => {
         loadingScreen.style.display = "none";
-    }, 1); //stock time is 4000
+    }, 4000); //stock time is 4000
     
     // Show the main content
     setTimeout(() => {
         content.style.display = 'block';
-    }, 1); //stock time is 3000
+    }, 3000); //stock time is 3000
 });

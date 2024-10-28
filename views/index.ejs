@@ -176,7 +176,7 @@
         </div>
 
         <!-- Thời gian làm việc, địa chỉ, liên hệ -->
-         <div class="container">
+         <div class="container" id="TG">
 
           <div class="m-auto my-3 w-75 d-flex justify-content-center" id="seperator">
             <div class="h-100" id="seperator-mask-left"></div>
@@ -189,13 +189,13 @@
             Chủ nhật không làm việc.
           </div>
          </div>
-         <div class="container">
+         <div class="container" id="DC">
           <button class="toggleDropdownAboutUs btn btn-link text-black text-decoration-none" id="dropdown-button"><h1 class="fw-bold fst-italic">Địa chỉ <span id="arrow">➤</span></h1></button>
           <div id="aboutUsDropdown" class="ps-5 fw-bold fst-italic">
             Địa chỉ: <a href="https://maps.app.goo.gl/RdA6Bd1MVPkrhsog7" target="_blank">204 Đường Đ. Hoàng Diệu 2, Phường Linh Trung, Thủ Đức, Hồ Chí Minh, Vietnam</a>
           </div>
          </div>
-         <div class="container">
+         <div class="container" id="TTLH">
           <button class="toggleDropdownAboutUs btn btn-link text-black text-decoration-none" id="dropdown-button"><h1 class="fw-bold fst-italic">Thông tin liên hệ<span id="arrow">➤</span></h1></button>
           <div id="aboutUsDropdown" class="ps-5 fw-bold fst-italic">
             
@@ -207,7 +207,9 @@
       
 
       <!-- footer -->
-
+      <div class="text-center h-auto">
+        <div class="top-0 z-3" id="whiteToHeavyTealGradient"></div>
+      </div>
       <%- include('partials/footer.ejs') %>
     </div>
   </div>

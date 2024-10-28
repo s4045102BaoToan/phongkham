@@ -157,9 +157,14 @@ html{
     position: fixed;
     z-index: 10;
 }
+
+#dropdown a{
+    background-color: #f4f4f4;
+    transition: transform 0.2s ease;
+}
 #dropdown a:hover{
     background-color: #e2e2e2;
-    transform: scaleX(1.1);
+    transform: translateX(5px);
 }
 
 #dropdown{
@@ -374,6 +379,8 @@ html{
     white-space: nowrap;
     overflow: hidden;       
     text-overflow: ellipsis;
-    max-width: 55vw;                
+    max-width: 40vw;                
     display: block;
 }
+
+/*👉footer👈*/

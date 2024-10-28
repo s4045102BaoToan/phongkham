@@ -48,12 +48,12 @@
       } %>
       <!-------------------------- Khám phụ khoa -------------------------->
       <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
-        <div class="w-100">
-          <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Khám phụ khoa</h1>
+        <div class="w-100" id="KPK">
+          <h1 class="background-dark-teal w-100 p-3 z-3 KPK" id="dichvuItemsTitle">Khám phụ khoa</h1>
           <% for(item of dichvuArray){ %>
             <% if(item.class === "KPK"){%>
             <div class="animated-dichvu d-flex mb-3" onclick="toggleOverflow(event)">
-              <div class="mx-3 text-nowrap"><h4 class="my-1 overflow-maxwidth-custom"><%= item.name %></h4></div>
+              <div class="mx-3 text-nowrap"><h4 class="my-1 me-0 overflow-maxwidth-custom"><%= item.name %></h4></div>
               <div class="border-bottom border-2 border-white w-100 mx-0"></div>
               <div class="mx-3 me-4 "><h4 class="my-1"><%= formatNumberToCustomDecimal(parseInt(item.price)/ 1000)%>K</h4></div>
             </div>
@@ -63,7 +63,7 @@
       </div>
       <!-------------------------- Kế hoạch hóa gia đình -------------------------->
       <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
-        <div class="w-100">
+        <div class="w-100" id="KHHGD">
           <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Kế hoạch hóa gia đình
           </h1>
           <% for(item of dichvuArray){ %>
@@ -71,7 +71,7 @@
             <div class="animated-dichvu d-flex mb-3" onclick="toggleOverflow(event)">
               <div class="mx-3 text-nowrap"><h4 class="my-1 overflow-maxwidth-custom"><%= item.name %></h4></div>
               <div class="border-bottom border-2 border-white w-100 mx-0"></div>
-              <div class="mx-3 me-4 "><h4 class="my-1"><%= formatNumberToCustomDecimal(parseInt(item.price)/ 1000)%>K</h4></div>
+              <div class="mx-3 me-4"><h4 class="my-1"><%= formatNumberToCustomDecimal(parseInt(item.price)/ 1000)%>K</h4></div>
             </div>
             <% }} %>
         </div>
@@ -80,8 +80,8 @@
 
       <!-------------------------- Xét nghiệm -------------------------->
       <div class="d-flex justify-content-between mt-2 mx-2 p-3" id="dichvuItems">
-        <div class="w-100">
-          <h1 class="background-dark-teal w-100 p-3 z-3" id="dichvuItemsTitle">Xét nghiệm
+        <div class="w-100" id="XN">
+          <h1 class="background-dark-teal w-100 p-3 z-3 XN" id="dichvuItemsTitle">Xét nghiệm
           </h1>
           <% for(item of dichvuArray){ %>
             <% if(item.class === "XN"){%>
@@ -96,7 +96,7 @@
       </div>
 
       <!----------------------------- footer ----------------------------->
-      <%- include('partials/footer.ejs') %>
+        <%- include('partials/footer.ejs') %>
     </div>
   </div>
   <!-- GSAP -->

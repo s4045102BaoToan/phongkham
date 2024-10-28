@@ -1,5 +1,6 @@
 #loadingScreen{
 top: 0px;
+z-index: 1000;
 position: fixed;
 background: rgb(255, 255, 255);
 display: flex;
